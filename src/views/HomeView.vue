@@ -90,6 +90,13 @@ export default class HomeView extends Vue {
   align-items: center;
   padding-bottom: 5px;
   font-size: 1.25rem;
+  scale: 100%;
+  transition-duration: 0.5s;
+}
+
+.button:hover, .block:hover {
+  scale: 102%;
+  transition-duration: 0.5s;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -100,14 +107,7 @@ export default class HomeView extends Vue {
 
   .button {
     background: var(--d-background-color);
-    scale: 100%;
-    transition-duration: 0.5s;
-  }
 
-  .button:hover, .block:hover {
-    //box-shadow: 0 0 5px 3px var(--d-background-color);
-    scale: 102%;
-    transition-duration: 0.5s;
   }
 }
 </style>
