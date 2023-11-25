@@ -6,8 +6,11 @@
         --d-text-color: #d2d2d2;
         --d-border-color-1: #aba6a6;
         --d-border-color-2: #5e5e5e;
-        --d-border-color-3: rgba(131, 111, 111, 0.5);
-        --d-card-background-color: rgba(131, 111, 111, 0.5);
+        --d-border-color-3: #893aaf;
+        --d-card-background-color-1: #893aaf;
+        --d-card-background-color-2: #530d65;
+        --d-image-shadow-transparent-white: rgba(189, 189, 189, 0.76);
+        --d-image-shadow-transparent-grey: rgba(124, 124, 124, 0.72);
     }
 }
 
@@ -19,7 +22,9 @@
         --d-text-color: #d2d2d2;
         --d-border-color-1: #aba6a6;
         --d-border-color-2: #5e5e5e;
-        --d-border-color-3: rgba(131, 111, 111, 0.5);
-        --d-card-background-color: rgba(131, 111, 111, 0.5);
+        --d-border-color-3: rgba(153, 112, 187, 0.71);
+        --d-card-background-color: rgba(153, 112, 187, 0.71);
+        --d-image-shadow-transparent-white: rgba(189, 189, 189, 0.76);
+        --d-image-shadow-transparent-grey: rgba(145, 145, 145, 0.72);
     }
 }

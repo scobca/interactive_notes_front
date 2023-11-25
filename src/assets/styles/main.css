@@ -11,11 +11,13 @@
 
 #app {
     min-height: 100vh;
+    background: url("@/assets/images/background.jpg") fixed no-repeat;
+    background-size: 110%;
 }
 
 @media (prefers-color-scheme: dark) {
     #app {
-        background: var(--d-background-color);
+        /*background: var(--d-background-color);*/
         color: var(--d-text-color);
     }
 
