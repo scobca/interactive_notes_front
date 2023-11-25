@@ -1,8 +1,25 @@
-:root {
-    --d-selection-color: #857d7d;
-    --d-background-color: #2f2e2e;
-    --d-background-color-darker: #232323;
-    --d-text-color: #d2d2d2;
-    --d-border-color-1: #aba6a6;
-    --d-border-color-2: #5e5e5e;
+@media (prefers-color-scheme: dark) {
+    :root {
+        --d-selection-color: #857d7d;
+        --d-background-color: #2f2e2e;
+        --d-background-color-darker: #232323;
+        --d-text-color: #d2d2d2;
+        --d-border-color-1: #aba6a6;
+        --d-border-color-2: #5e5e5e;
+        --d-border-color-3: rgba(131, 111, 111, 0.5);
+        --d-card-background-color: rgba(131, 111, 111, 0.5);
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --d-selection-color: #857d7d;
+        --d-background-color: #2f2e2e;
+        --d-background-color-darker: #232323;
+        --d-text-color: #d2d2d2;
+        --d-border-color-1: #aba6a6;
+        --d-border-color-2: #5e5e5e;
+        --d-border-color-3: rgba(131, 111, 111, 0.5);
+        --d-card-background-color: rgba(131, 111, 111, 0.5);
+    }
 }
