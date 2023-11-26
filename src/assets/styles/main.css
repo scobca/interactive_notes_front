@@ -15,9 +15,24 @@
     background-size: 110%;
 }
 
+router-link,
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+router-link:hover,
+a:hover {
+    color: inherit;
+}
+
 @media (prefers-color-scheme: dark) {
     #app {
         /*background: var(--d-background-color);*/
+        color: var(--d-text-color);
+    }
+
+    router-link {
         color: var(--d-text-color);
     }
 

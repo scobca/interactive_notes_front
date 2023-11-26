@@ -25,6 +25,14 @@
       </div>
       <div class="block">
         <h2 class="button" @click="checkValid"> Зарегистрироваться </h2>
+        <p v-bind:style="{fontSize: '0.85rem', paddingTop: '5px'}">
+          Уже есть аккаунт?
+
+          <span class="login"
+                v-bind:style="{borderBottom: '1px solid var(--d-text-color)', cursor: 'pointer'}"
+                @click="this.$router.push('/login')"> Войти
+          </span>
+        </p>
       </div>
     </div>
   </div>
@@ -116,11 +124,19 @@ export default class RegistrationView extends Vue {
   padding: .6rem;
   scale: 100%;
   transition-duration: 0.25s;
+  width: 15rem;
+  text-align: center;
 }
 
 .button:hover {
   scale: 103%;
   transition-duration: 0.25s;
+}
+
+.block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 @media (prefers-color-scheme: dark) {
