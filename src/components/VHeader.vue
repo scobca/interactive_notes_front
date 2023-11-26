@@ -52,7 +52,6 @@ export default class VHeader extends Vue {
 .buttons_list {
   max-height: 5vh;
   display: flex;
-  gap: 2rem;
   text-decoration: none;
   list-style: none;
   margin-top: .3rem;
@@ -61,6 +60,7 @@ export default class VHeader extends Vue {
 .button {
   border-radius: .5rem;
   padding: .4rem;
+  margin: 0 1rem
 }
 
 .header_text {
