@@ -5,7 +5,9 @@
     </div>
     <div class="block_buttons">
       <ul class="buttons_list">
-        <li class="button">Создать заметку</li>
+        <router-link to="/create">
+          <li class="button">Создать заметку</li>
+        </router-link>
         <router-link to="/login">
           <li class="button" v-if="!login && !visibleButtons">Войти</li>
         </router-link>
@@ -28,7 +30,7 @@ export default class VHeader extends Vue {
   login: boolean = false
 
   get visibleButtons() {
-    if (this.$route.name == 'reg' || this.$route.name == 'login') {
+    if (this.$route.name == 'reg' || this.$route.name == 'login' || this.$route.name == 'create') {
       return true
     } else if (this.$route.name == '/') {
       return false
