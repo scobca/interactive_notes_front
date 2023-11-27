@@ -46,9 +46,6 @@ export default class CreateNoteView extends Vue {
 </script>
 
 <style scoped>
-.area {
-}
-
 .container {
   display: flex;
   flex-direction: column;
