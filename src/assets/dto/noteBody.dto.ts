@@ -1,5 +1,5 @@
 export type NoteBodyDto = {
-  header: string,
-  text: string,
-  date: string,
+  header: string | null,
+  text: string | null,
+  date: string | null,
 }

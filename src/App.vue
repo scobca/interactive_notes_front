@@ -2,8 +2,8 @@
   <div class="main_wrapper">
     <VHeader/>
     <router-view/>
-    <VNote :note="note"/>
-    <VNoteCard :note="note"/>
+<!--    <VNote :note="note"/>-->
+<!--    <VNoteCard :note="note"/>-->
   </div>
 </template>
 
