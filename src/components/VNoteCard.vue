@@ -1,7 +1,7 @@
 <template>
   <div class="container">
-    <h2 class="container_header">{{ note.header }}</h2>
-    <p class="container_text">{{ note.date }}</p>
+    <h2 class="container_header">{{ header }}</h2>
+    <p class="container_text">{{ date }}</p>
   </div>
 </template>
 
@@ -15,7 +15,10 @@ import {NoteBodyDto} from "@/assets/dto/noteBody.dto";
 })
 export default class VNoteCard extends Vue {
   @Prop()
-  note!: NoteBodyDto
+  header!: string | any
+
+  @Prop()
+  date!: any
 }
 </script>
 
@@ -25,11 +28,17 @@ export default class VNoteCard extends Vue {
   height: 15rem;
   padding: .75rem;
   border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: flex-start;
+  align-content: flex-start;
 }
 
 .container_header {
   margin-bottom: .5rem;
   max-width: 90%;
+  height: 1rem;
 }
 
 @media (prefers-color-scheme: dark) {

@@ -23,7 +23,7 @@
       </div>
     </div>
     <div class="block">
-      <h2 class="button"> К заметкам!</h2>
+      <h2 class="button" @click="this.$router.push('/notes')"> К заметкам!</h2>
     </div>
   </div>
 </template>

@@ -30,11 +30,7 @@ export default class VHeader extends Vue {
   login: boolean = false
 
   get visibleButtons() {
-    if (this.$route.name == 'reg' || this.$route.name == 'login' || this.$route.name == 'create') {
-      return true
-    } else if (this.$route.name == '/') {
-      return false
-    }
+    return this.$route.path != '/';
   }
 }
 </script>
