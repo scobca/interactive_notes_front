@@ -9,7 +9,6 @@
 
 import {Options, Vue} from 'vue-class-component';
 import {Prop} from "vue-property-decorator";
-import {NoteBodyDto} from "@/assets/dto/noteBody.dto";
 @Options({
   name: 'VNoteCard',
 })
