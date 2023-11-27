@@ -20,9 +20,9 @@ import VNoteCard from "@/components/VNoteCard.vue";
 })
 export default class App extends Vue {
   note: NoteBodyDto = {
+    id: 1,
     header: 'Заголовок',
     text: 'Текст заметки',
-    date: Date.now(),
   }
 }
 </script>

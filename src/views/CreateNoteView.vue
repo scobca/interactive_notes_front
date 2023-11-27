@@ -4,6 +4,11 @@
       <h2>Создание новой заметки</h2>
       <div class="inputs_block">
         <div class="input_container">
+          <p class="tag">Номер заметки</p>
+          <VInput v-model="note.id" :placeholder="'111'" class="input"/>
+        </div>
+
+        <div class="input_container">
           <p class="tag">Название заметки</p>
           <VInput v-model="note.header" :placeholder="'Заметка 1'" class="input"/>
         </div>
@@ -34,9 +39,9 @@ import {NoteBodyDto} from "@/assets/dto/noteBody.dto";
 })
 export default class CreateNoteView extends Vue {
   note: NoteBodyDto = {
+    id: null,
     header: null,
     text: null,
-    date: Date.now(),
   }
 
   createNewNote() {

@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div class="notes_container" v-for="(item) in notes">
-      <VNoteCard :header="item.header" :date="item.text"/>
+      <VNoteCard :header="item.header" :date="item.text" @click="selectNote(item.id)"/>
     </div>
   </div>
 </template>
@@ -16,48 +16,15 @@ import VNoteCard from "@/components/VNoteCard.vue";
   components: {VNoteCard}
 })
 export default class NotesView extends Vue {
-  notes: NoteBodyDto[] = [
-    {
-    header: 'Сделать проект',
-    text: 'Напомнить о выполнении проекта',
-    date: Date.now(),
-    },
-    {
-    header: 'Рецепт супа',
-    text: 'Как сделать борщ за час и не сломаться...',
-    date: Date.now(),
-    },
-    {
-    header: 'Список покупок',
-    text: 'Огурцы, помидоры, салат, майонез',
-    date: Date.now(),
-    },
-    {
-      header: 'Сделать проект',
-      text: 'Напомнить о выполнении проекта',
-      date: Date.now(),
-    },
-    {
-      header: 'Рецепт супа',
-      text: 'Как сделать борщ за час и не сломаться...',
-      date: Date.now(),
-    },
-    {
-      header: 'Список покупок',
-      text: 'Огурцы, помидоры, салат, майонез',
-      date: Date.now(),
-    },
-    {
-      header: 'Рецепт супа',
-      text: 'Как сделать борщ за час и не сломаться...',
-      date: Date.now(),
-    },
-    {
-      header: 'Список покупок',
-      text: 'Огурцы, помидоры, салат, майонез',
-      date: Date.now(),
-    },
-  ]
+  notes: NoteBodyDto[] | null = null
+
+  created() {
+    this.notes = this.$store.getters.getAllNotes
+  }
+
+  selectNote(id: number | null) {
+    console.log(id)
+  }
 }
 </script>
 
