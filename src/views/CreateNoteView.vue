@@ -36,11 +36,11 @@ export default class CreateNoteView extends Vue {
   note: NoteBodyDto = {
     header: null,
     text: null,
-    date: null,
+    date: Date.now(),
   }
 
   createNewNote() {
-    alert('created')
+    console.log(this.note)
   }
 }
 </script>

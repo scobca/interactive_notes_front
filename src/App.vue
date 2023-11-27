@@ -22,7 +22,7 @@ export default class App extends Vue {
   note: NoteBodyDto = {
     header: 'Заголовок',
     text: 'Текст заметки',
-    date: '2023-01-01'
+    date: Date.now(),
   }
 }
 </script>
