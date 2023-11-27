@@ -1,8 +1,9 @@
 <template>
   <div class="main_wrapper">
-<!--    <VHeader/>-->
-<!--    <router-view/>-->
+    <VHeader/>
+    <router-view/>
     <VNote :note="note"/>
+    <VNoteCard :note="note"/>
   </div>
 </template>
 
@@ -11,15 +12,17 @@ import {Options, Vue} from "vue-class-component";
 import VHeader from "@/components/VHeader.vue";
 import VNote from "@/components/VNote.vue";
 import {NoteBodyDto} from "@/assets/dto/noteBody.dto";
+import VNoteCard from "@/components/VNoteCard.vue";
 
 @Options({
   name: 'App',
-  components: {VNote, VHeader},
+  components: {VNoteCard, VNote, VHeader},
 })
 export default class App extends Vue {
   note: NoteBodyDto = {
     header: 'Заголовок',
-    text: 'Текст заметки'
+    text: 'Текст заметки',
+    date: '2023-01-01'
   }
 }
 </script>
