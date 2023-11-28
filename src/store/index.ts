@@ -6,7 +6,7 @@ export interface State {
 }
 
 export const store = createStore<State>({
-  state: {
+  state: <State> {
     notes: [
       {
         id: 1,
@@ -36,6 +36,17 @@ export const store = createStore<State>({
     }
   },
   mutations: {
+    addNewNote(body: any, state: any) {
+      const el: NoteBodyDto = {
+        id: body.id,
+        header: body.header,
+        text: body.text
+      }
+
+      // state.notes.push(el)
+      console.log(el)
+      console.log(state.notes)
+    }
   },
   actions: {
   },

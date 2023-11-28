@@ -46,6 +46,8 @@ export default class CreateNoteView extends Vue {
 
   createNewNote() {
     console.log(this.note)
+
+    this.$store.commit('addNewNote', this.note)
   }
 }
 </script>
